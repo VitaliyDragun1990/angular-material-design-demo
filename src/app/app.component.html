@@ -1,11 +1,27 @@
-<mat-form-field>
-  <mat-select [(value)]="favoriteColor" placeholder="Favorite color">
-    <mat-option
-      *ngFor="let color of colors"
-      [value]="color.id">{{color.name}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-
-
-<div *ngIf="favoriteColor !== undefined">Your favorite color is {{colors[favoriteColor].name}}</div>
+<form>
+  <!--INPUT-->
+  <div>
+    <mat-form-field>
+      <span matPrefix>admin.</span>
+      <input
+        ngModel
+        #username="ngModel"
+        name="username"
+        type="text"
+        matInput
+        required
+        placeholder="Username">
+      <mat-hint>Type a unique username</mat-hint>
+      <span matSuffix>@domain.com</span>
+      <mat-error *ngIf="username.invalid && username.errors['required']">
+        The username field is required.
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <!--TEXTAREA-->
+  <div>
+    <mat-form-field>
+      <textarea matTextareaAutosize matInput placeholder="Leave a comment"></textarea>
+    </mat-form-field>
+  </div>
+</form>
