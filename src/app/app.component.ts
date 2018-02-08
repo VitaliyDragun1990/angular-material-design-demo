@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/timer';
 
 @Component({
   selector: 'app-root',
@@ -6,16 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  categories = [
-    {name: 'Beginner', selected: false },
-    {name: 'Intermediate', selected: false },
-    {name: 'Advanced', selected: false },
-  ];
+  isLoading = false;
 
-  selectCategory(category: { name: string; selected: boolean }) {
-    this.categories.filter(c => c !== category)
-      .forEach(c => c['selected'] = false);
+  constructor() {
+    this.isLoading = true;
+    this.getCourses()
+      .subscribe(() => this.isLoading = false);
+  }
 
-    category.selected = !category.selected;
+  getCourses() {
+    return Observable.timer(2000);
   }
 }

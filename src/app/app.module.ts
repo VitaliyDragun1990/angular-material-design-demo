@@ -13,7 +13,10 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
-import { MatButtonModule, MatChipsModule, MatIcon, MatIconModule, MatNativeDateModule } from '@angular/material';
+import {
+  MatButtonModule, MatChipsModule, MatIcon, MatIconModule, MatNativeDateModule, MatProgressSpinnerModule,
+  MatTooltipModule
+} from '@angular/material';
 
 
 @NgModule({
@@ -32,7 +35,9 @@ import { MatButtonModule, MatChipsModule, MatIcon, MatIconModule, MatNativeDateM
     MatDatepickerModule,
     MatIconModule,
     MatButtonModule,
-    MatChipsModule
+    MatChipsModule,
+    MatProgressSpinnerModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
