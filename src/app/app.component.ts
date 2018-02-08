@@ -12,5 +12,8 @@ export class AppComponent {
     { id: 2, name: 'Blue' }
   ];
 
+  minDate = new Date(2017, 0, 1);
+  maxDate = new Date(2017, 7, 1);
+
   favoriteColor;
 }
