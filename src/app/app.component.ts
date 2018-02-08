@@ -6,14 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  colors = [
-    { id: 0, name: 'Red' },
-    { id: 1, name: 'Green' },
-    { id: 2, name: 'Blue' }
+  categories = [
+    {name: 'Beginner', selected: false },
+    {name: 'Intermediate', selected: false },
+    {name: 'Advanced', selected: false },
   ];
 
-  minDate = new Date(2017, 0, 1);
-  maxDate = new Date(2017, 7, 1);
+  selectCategory(category: { name: string; selected: boolean }) {
+    this.categories.filter(c => c !== category)
+      .forEach(c => c['selected'] = false);
 
-  favoriteColor;
+    category.selected = !category.selected;
+  }
 }
