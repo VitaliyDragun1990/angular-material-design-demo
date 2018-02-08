@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import {
-  MatButtonModule, MatChipsModule, MatIcon, MatIconModule, MatNativeDateModule, MatProgressSpinnerModule,
+  MatButtonModule, MatChipsModule, MatIcon, MatIconModule, MatNativeDateModule, MatProgressSpinnerModule, MatTabsModule,
   MatTooltipModule
 } from '@angular/material';
 
@@ -37,7 +37,8 @@ import {
     MatButtonModule,
     MatChipsModule,
     MatProgressSpinnerModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
