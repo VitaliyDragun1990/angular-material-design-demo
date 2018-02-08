@@ -13,7 +13,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
-import { MatIcon, MatIconModule, MatNativeDateModule } from '@angular/material';
+import { MatButtonModule, MatIcon, MatIconModule, MatNativeDateModule } from '@angular/material';
 
 
 @NgModule({
@@ -30,7 +30,8 @@ import { MatIcon, MatIconModule, MatNativeDateModule } from '@angular/material';
     MatInputModule,
     MatNativeDateModule,
     MatDatepickerModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
