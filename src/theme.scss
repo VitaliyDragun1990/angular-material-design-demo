@@ -1,0 +1,14 @@
+@import "~@angular/material/_theming";
+
+@include mat-core();
+
+// define custom color for theme
+$app-primary: mat-palette($mat-blue, 600);
+$app-accent: mat-palette($mat-yellow, 700);
+$app-warn: mat-palette($mat-red);
+
+// crete custom theme
+$app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
+
+// use custom theme
+@include angular-material-theme($app-theme);
