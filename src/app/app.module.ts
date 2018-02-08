@@ -14,14 +14,20 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import {
-  MatButtonModule, MatChipsModule, MatIcon, MatIconModule, MatNativeDateModule, MatProgressSpinnerModule, MatTabsModule,
+  MatButtonModule, MatChipsModule, MatDialogModule, MatIcon, MatIconModule, MatNativeDateModule, MatProgressSpinnerModule, MatTabsModule,
   MatTooltipModule
 } from '@angular/material';
+import { EditCourseComponent } from './edit-course/edit-course.component';
+import { CourseService } from './course.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EditCourseComponent
+  ],
+  entryComponents: [
+    EditCourseComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +44,13 @@ import {
     MatChipsModule,
     MatProgressSpinnerModule,
     MatTooltipModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDialogModule
   ],
-  providers: [],
+  providers: [
+    CourseService,
+    // {provide: DIALOG_DATA, useValue: {} }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
